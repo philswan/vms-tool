@@ -5,10 +5,13 @@
 // Take a look at patterns.scss to see which files are imported.
 @import 'patterns';
 
+// Utility classes used for nudging spacing
+@import 'utility';
+
 // Font Overrides
-*:not(.token) {
-  font-family: $Helvetica-Regular; 
-}
+// *:not(.token) {
+//   font-family: $Helvetica-Regular; 
+// }
 #proposition-name {
   font-family: $Helvetica-Regular !important;
 }
@@ -36,10 +39,37 @@
   margin-bottom: 35px;
 }
 
+.alpha-tag{
+  @include phase-tag(alpha);
+}
+
+.phase-banner  {
+  @include phase-banner(alpha);
+  @include phase-banner(beta);
+}
+
+
 // form styles
 legend {
 	font-weight: 700;
 }
+
+.form-control {
+  width: 100%;
+  max-width: 350px;
+}
+
+.form-control-1-4, 
+.postcode {
+  max-width: 200px;
+  margin-right: 10px;
+}
+
+// select {
+//   width: 100%;
+//   font-size: 19px;
+//   line-height: 
+// }
 
 // declaration
 .legal_message {
