@@ -4694,6 +4694,10 @@ input[type="file"] {
   width: 25%;
 }
 
+.sec-link a, sec-link a:visited {
+  color: #333;
+}
+
 .legal_message {
   margin: 30px 0 30px;
   padding-left: 60px;
