@@ -1,0 +1,74 @@
+{% extends "layout_dwp.html" %}
+
+{% block page_title %}
+  Title
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+{% include "includes/alpha-banner.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      {# Back link #}
+        {% import "includes/back-link.html" as back %}
+        {{ back.url('/') }}
+      {# Back link #}
+
+      <form method="post" class="form">
+
+        <h1 class="form-title heading-large m-b-xl">
+{#           <span class="heading-secondary">
+            Step X
+          </span> #}
+           Visit address
+        </h1>
+
+
+
+        <fieldset class="m-b-l">
+
+          <legend class="form-label m-b-s">Which address will the visit be at?</legend>
+
+          <label class="block-label" for="choice1-1">
+            <input id="choice1-1" type="radio" name="choice1" value="yes">
+            Customer
+          </label>
+
+          <label class="block-label" for="choice1-2">
+            <input id="choice1-2" type="radio" name="choice1" value="no">
+            Representative
+          </label>
+
+          <label class="block-label" for="choice1-3" data-target="panel">
+            <input id="choice1-3" type="radio" name="choice1" value="no">
+            Other
+          </label>
+
+          <div id="panel" class="panel panel-border-narrow js-hidden m-b-s">
+
+            <div class="form-group m-b-l">
+              <label class="form-label m-b-xs" for="full-name">Postcode of visit address</label>
+              <input type="text" class="form-control postcode m-b-s" id="full-name">
+              <button id="add-button" class="button button-add-another">Find UK address</button>
+              <p class="m-b-0"><a href="#">Enter address manually</a></p>
+            </div>
+
+          </div>{# / panel #}
+
+        </fieldset>
+
+
+
+        <div class="form-group">
+          <input type="submit" class="button" value="Continue">
+        </div>
+
+      </form>
+
+    </div>{# / column-two-thirds #}
+  </div>{# / grid-row #}
+</main>
+{% endblock %}

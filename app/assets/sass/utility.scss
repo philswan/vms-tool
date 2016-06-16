@@ -24,7 +24,7 @@
 .m-b-xs {
   margin-bottom: 5px !important;
   @include media(tablet) {
-    margin-bottom: 7px !important;
+    margin-bottom: 8px !important;
   }
 }
 
@@ -76,6 +76,13 @@
   }
 }
 
+.m-b-nm {
+  margin-top: -28px !important;
+  @include media(tablet) {
+    margin-top: -33px !important;
+  }
+}
+
 .m-t-nm {
   margin-top: -15px;
   @include media(tablet) {
@@ -98,6 +105,13 @@
 }
 
 // Positive
+
+.m-t-xs {
+  margin-top: 5px !important;
+  @include media(tablet) {
+    margin-top: 8px !important;
+  }
+}
 
 .m-t-m {
   margin-top: 15px;

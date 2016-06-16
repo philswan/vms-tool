@@ -1,0 +1,88 @@
+{% extends "layout_dwp.html" %}
+
+{% block page_title %}
+  Title
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+{% include "includes/alpha-banner.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      {# Back link #}
+        {% import "includes/back-link.html" as back %}
+        {{ back.url('/') }}
+      {# Back link #}
+
+      <form method="post" class="form">
+
+        <h1 class="form-title heading-large m-b-xl">
+{#           <span class="heading-secondary">
+            Step X
+          </span> #}
+           Customer contact
+        </h1>
+
+        <fieldset>
+
+          <legend class="heading-medium m-b-s">Address</legend>
+
+          {# Postcode lookup #}
+            {% import "includes/postcode-lookup.html" as postcode %}
+            {{ postcode.label('Customer’s postcode') }}
+          {# Postcode lookup #}
+
+          <div class="form-group m-b-ns">
+            <label class="form-checkbox" for="care-of">
+              <input id="care-of" name="care-of" type="checkbox" value="true">
+              This is a &lsquo;care of&rsquo; address
+            </label>
+          </div>
+
+        </fieldset>
+
+        <fieldset class="m-b-m">
+
+          <legend class="heading-medium m-b-s">Phone number</legend>
+
+          <div class="form-group m-b-ml">
+            <label class="form-label m-b-xs" for="full-name">Customer&rsquo;s landline or mobile number</label>
+            <input type="text" class="form-control" id="full-name">
+          </div>
+
+        </fieldset>
+
+        <fieldset class="m-b-s">
+
+          <legend class="heading-medium m-b-s">Contact preferences</legend>
+
+          <div class="form-group">
+
+            <label class="block-label" for="large-print">
+              <input id="large-print" type="checkbox" name="large-print" value="large-print" >
+              Large print
+            </label>
+
+            <label class="block-label" for="welsh-letter">
+              <input id="welsh-letter" type="checkbox" name="welsh-letter" value="welsh-letter" >
+              Welsh language
+            </label>
+
+          </div>
+
+        </fieldset>
+
+    
+        <div class="form-group">
+          <input type="submit" class="button" value="Continue">
+        </div>
+
+      </form>
+
+    </div>{# / column-two-thirds #}
+  </div>{# / grid-row #}
+</main>
+{% endblock %}

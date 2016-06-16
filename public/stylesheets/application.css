@@ -3954,7 +3954,7 @@ ul.todo li:hover {
 
 @media (min-width: 641px) {
   .m-b-xs {
-    margin-bottom: 7px !important;
+    margin-bottom: 8px !important;
   }
 }
 
@@ -4018,6 +4018,16 @@ ul.todo li:hover {
   }
 }
 
+.m-b-nm {
+  margin-top: -28px !important;
+}
+
+@media (min-width: 641px) {
+  .m-b-nm {
+    margin-top: -33px !important;
+  }
+}
+
 .m-t-nm {
   margin-top: -15px;
 }
@@ -4040,6 +4050,16 @@ ul.todo li:hover {
 
 .m-t-0 {
   margin-top: 0px;
+}
+
+.m-t-xs {
+  margin-top: 5px !important;
+}
+
+@media (min-width: 641px) {
+  .m-t-xs {
+    margin-top: 8px !important;
+  }
 }
 
 .m-t-m {
@@ -4664,6 +4684,14 @@ legend {
 .postcode {
   max-width: 200px;
   margin-right: 10px;
+}
+
+input[type="file"] {
+  text-align: baseline;
+}
+
+.left-col {
+  width: 25%;
 }
 
 .legal_message {

@@ -1,0 +1,92 @@
+{% extends "layout_dwp.html" %}
+
+{% block page_title %}
+  Title
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+{% include "includes/alpha-banner.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      {# Back link #}
+        {% import "includes/back-link.html" as back %}
+        {{ back.url('/') }}
+      {# Back link #}
+
+      <form method="post" class="form">
+
+        <h1 class="form-title heading-large m-b-xl">
+{#           <span class="heading-secondary">
+            Step X
+          </span> #}
+           Referrer details
+        </h1>
+
+        <fieldset class="m-b-m">
+
+          <legend class="heading-medium m-b-s">About you</legend>
+
+          <!-- Full name -->
+          <div class="form-group m-b-ml">
+            <label class="form-label m-b-xs" for="full-name">Full name</label>
+            <input type="text" class="form-control" id="full-name">
+          </div>
+
+          <!-- Contact number -->
+          <div class="form-group m-b-ml">
+            <label class="form-label m-b-xs" for="phone-number">Contact phone number</label>
+            <input type="text" class="form-control" id="phone-number">
+          </div>
+
+          <!-- Contact number -->
+          <div class="form-group m-b-ml">
+            <label class="form-label m-b-xs" for="contact-email">Contact email address</label>
+            <input type="text" class="form-control" id="contact-email">
+          </div>
+
+          <!-- Contact number -->
+          <div class="form-group m-b-ml">
+            <label class="form-label m-b-xs" for="return-email">Return email address
+              <span class="form-hint">All communications to will be sent to this address.</span>
+            </label>
+            <input type="text" class="form-control" id="return-email">
+          </div>
+
+        </fieldset>
+
+        <fieldset class="m-b-s">
+
+          <legend class="heading-medium m-b-s">Your organisation</legend>
+
+          <!-- Contact number -->
+          <div class="form-group m-b-ml">
+            <label class="form-label m-b-xs" for="referrer-organisation">Organisation name</label>
+            <select id="referrer-organisation" name="referrer-organisation" class="form-control">
+              <option value="place-holder">Please select an organisation</option>
+            </select>
+          </div>
+
+          <!-- Location -->
+          <div class="form-group m-b-ml">
+            <label class="form-label m-b-xs" for="referrer-location">Location</label>
+            <select id="referrer-location" name="referrer-location" class="form-control">
+              <option value="place-holder">Please select a location</option>
+            </select>
+          </div>
+
+        </fieldset>
+
+        <div class="form-group">
+          <input type="submit" class="button" value="Continue">
+        </div>
+
+      </form>
+
+    </div>{# / column-two-thirds #}
+  </div>{# / grid-row #}
+</main>
+{% endblock %}

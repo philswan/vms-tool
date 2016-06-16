@@ -1,0 +1,80 @@
+{% extends "layout_dwp.html" %}
+
+{% block page_title %}
+  Title
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+{% include "includes/alpha-banner.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      {# Back link #}
+        {% import "includes/back-link.html" as back %}
+        {{ back.url('/') }}
+      {# Back link #}
+
+      <form method="post" class="form">
+
+        <h1 class="form-title heading-large m-b-xl">
+{#           <span class="heading-secondary">
+            Step X
+          </span> #}
+           Representative contact
+        </h1>
+
+        <fieldset class="m-b-s">
+
+          <legend class="heading-medium m-b-s">Address</legend>
+
+          <fieldset class="form-group m-b-ml">
+
+            <legend class="form-label m-b-xs visually-hidden">Address</legend>
+
+            <label class="block-label" for="choice3-1">
+              <input id="choice3-1" type="radio" name="choice3" value="yes">
+              Same as customer address
+            </label>
+
+            <label class="block-label" for="choice3-2" data-target="panel">
+              <input id="choice3-2" type="radio" name="choice3" value="no">
+              Other address
+            </label>
+
+            <div id="panel" class="panel panel-border-narrow m-b-l js-hidden m-b-xs">
+
+            {# Postcode lookup #}
+              {% import "includes/postcode-lookup.html" as postcode %}
+              {{ postcode.label('Representative’s postcode') }}
+            {# Postcode lookup #}
+
+            </div>{# /panel #}
+
+          </fieldset>
+
+        </fieldset>
+
+        <fieldset class="m-b-s">
+
+          <legend class="heading-medium m-b-s">Phone number</legend>
+
+          <div class="form-group m-b-ml">
+            <label class="form-label m-b-xs" for="rep-number">Representative&rsquo;s landline or mobile number</label>
+            <input type="text" class="form-control" id="rep-number">
+          </div>
+
+        </fieldset>
+    
+        <div class="form-group">
+          <input type="submit" class="button" value="Continue">
+        </div>
+
+      </form>
+
+    </div>{# / column-two-thirds #}
+  </div>{# / grid-row #}
+</main>
+{% endblock %}

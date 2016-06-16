@@ -1,7 +1,7 @@
 {% extends "layout_dwp.html" %}
 
 {% block page_title %}
-  Step 2 - Customer
+  Title
 {% endblock %}
 
 {% block content %}
@@ -14,34 +14,29 @@
 
       {# Back link #}
         {% import "includes/back-link.html" as back %}
-        {{ back.url('step1-referrer') }}
+        {{ back.url('/') }}
       {# Back link #}
 
       <form method="post" class="form">
 
         <h1 class="form-title heading-large m-b-xl">
-          <span class="heading-secondary">
-            Step 2
-          </span>
-           Customer details
+{#           <span class="heading-secondary">
+            Step X
+          </span> #}
+           About the customer
         </h1>
 
-        <fieldset class="m-b-m">
+        <fieldset class="m-b-s">
 
-          <legend class="heading-medium m-b-m">About the customer</legend>
+{#           <legend class="heading-medium m-b-m">About the customer</legend> #}
 
-          <div class="form-group m-b-l">
-            <label class="form-label m-b-xs" for="full-name">Title</label>
-            <input type="text" class="form-control" id="full-name">
+          <div class="form-group m-b-ml">
+            <label class="form-label m-b-xs" for="title">Title</label>
+            <input type="text" class="form-control" id="title">
           </div>
 
-          <div class="form-group m-b-l">
-            <label class="form-label m-b-xs" for="full-name">First name</label>
-            <input type="text" class="form-control" id="full-name">
-          </div>
-
-          <div class="form-group m-b-l">
-            <label class="form-label m-b-xs" for="full-name">Last name</label>
+          <div class="form-group m-b-ml">
+            <label class="form-label m-b-xs" for="full-name">Full name</label>
             <input type="text" class="form-control" id="full-name">
           </div>
 
@@ -73,8 +68,8 @@
           </div><!-- / Date of birth -->
 
           <div class="form-group m-b-ml">
-            <label class="form-label m-b-xs" for="full-name">National insurance number (optional)</label>
-            <input type="text" class="form-control" id="full-name">
+            <label class="form-label m-b-xs" for="nino">National Insurance number (optional)</label>
+            <input type="text" class="form-control" id="nino">
           </div>
 
         </fieldset>

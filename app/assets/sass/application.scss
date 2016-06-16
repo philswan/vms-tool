@@ -65,6 +65,21 @@ legend {
   margin-right: 10px;
 }
 
+input[type="file"] {
+  // background-color: red;
+  text-align: baseline;
+}
+
+// table {
+//   min-width: 650px;
+//   overflow: scroll;
+// }
+
+.left-col {
+  width: 25%;
+  // background-color: red;
+}
+
 // select {
 //   width: 100%;
 //   font-size: 19px;
