@@ -48,7 +48,6 @@
   @include phase-banner(beta);
 }
 
-
 // form styles
 legend {
 	font-weight: 700;
@@ -66,29 +65,16 @@ legend {
 }
 
 input[type="file"] {
-  // background-color: red;
   text-align: baseline;
 }
 
-// table {
-//   min-width: 650px;
-//   overflow: scroll;
-// }
-
 .left-col {
   width: 25%;
-  // background-color: red;
 }
 
 .sec-link a, sec-link a:visited {
   color: #333;
 }
-
-// select {
-//   width: 100%;
-//   font-size: 19px;
-//   line-height: 
-// }
 
 // declaration
 .legal_message {
