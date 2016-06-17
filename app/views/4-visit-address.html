@@ -44,12 +44,10 @@
 
           <div id="panel" class="panel panel-border-narrow js-hidden m-b-s">
 
-            <div class="form-group m-b-l">
-              <label class="form-label m-b-xs" for="full-name">Postcode of visit address</label>
-              <input type="text" class="form-control postcode m-b-s" id="full-name">
-              <button id="add-button" class="button button-add-another">Find UK address</button>
-              <p class="m-b-0"><a href="#">Enter address manually</a></p>
-            </div>
+            {# Postcode lookup #}
+              {% import "includes/postcode-lookup.html" as postcode %}
+              {{ postcode.label('Postcode of visit address') }}
+            {# Postcode lookup #}
 
           </div>{# / panel #}
 
