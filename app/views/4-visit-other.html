@@ -14,13 +14,16 @@
 
       {# Back link #}
         {% import "includes/back-link.html" as back %}
-        {{ back.url('4-visit-address') }}
+        {{ back.url('/4-visit-address') }}
       {# Back link #}
 
       <form method="post" class="form">
 
         <h1 class="form-title heading-large m-b-xl">
-           Information for the visiting team
+          <span class="heading-secondary">
+            8 of 9
+          </span>
+          Information for the visiting team
         </h1>
 
         <div class="form-group">
@@ -34,7 +37,7 @@
           <fieldset class="inline">
             <legend class="form-label m-b-xs">Risk factors
               <span class="form-hint">
-                e.g. dog in the house, aggressive customer, unacceptable customer behaviour&nbsp;(UCB).
+                For example, dog in the house, aggressive customer, unacceptable customer behaviour&nbsp;(UCB).
               </span>
             </legend>
             <label class="block-label" for="choice1-1" data-target="panel-risk">
@@ -62,7 +65,7 @@
           <fieldset class="inline">
             <legend class="form-label m-b-xs">Accessibility requirements
               <span class="form-hint">
-                e.g. use back door.
+                For example, use back door.
               </span>
             </legend>
             <label class="block-label" for="choice2-1" data-target="panel-accessiblity">
@@ -84,10 +87,7 @@
 
         </div>{# / accessibility #}
 
-
-        <div class="form-group">
-          <input type="submit" class="button" value="Continue">
-        </div>
+        {% include "includes/continue-save.html" %}
 
       </form>
 

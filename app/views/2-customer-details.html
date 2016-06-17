@@ -14,13 +14,16 @@
 
       {# Back link #}
         {% import "includes/back-link.html" as back %}
-        {{ back.url('1-referrer') }}
+        {{ back.url('/1-referrer') }}
       {# Back link #}
 
       <form method="post" class="form">
 
         <h1 class="form-title heading-large m-b-xl">
-           About the customer
+          <span class="heading-secondary">
+            2 of 9
+          </span>
+          About the customer
         </h1>
 
         <fieldset class="m-b-s">
@@ -70,10 +73,8 @@
           </div>
 
         </fieldset>
-    
-        <div class="form-group">
-          <input type="submit" class="button" value="Continue">
-        </div>
+
+        {% include "includes/continue-save.html" %}
 
       </form>
 

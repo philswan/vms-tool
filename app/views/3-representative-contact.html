@@ -14,18 +14,21 @@
 
       {# Back link #}
         {% import "includes/back-link.html" as back %}
-        {{ back.url('3-representative-details') }}
+        {{ back.url('/3-representative-details') }}
       {# Back link #}
 
       <form method="post" class="form">
 
         <h1 class="form-title heading-large m-b-xl">
-           Representative contact
+          <span class="heading-secondary">
+            5 of 9
+          </span>
+          Representative&rsquo;s contact details
         </h1>
 
         <fieldset class="m-b-s">
 
-          <legend class="heading-medium m-b-s">Address</legend>
+          <legend class="form-label m-b-xs">Representative&rsquo;s address</legend>
 
           <fieldset class="form-group m-b-ml">
 
@@ -56,18 +59,15 @@
 
         <fieldset class="m-b-s">
 
-          <legend class="heading-medium m-b-s">Phone number</legend>
 
           <div class="form-group m-b-ml">
-            <label class="form-label m-b-xs" for="rep-number">Representative&rsquo;s landline or mobile number</label>
+            <label class="form-label m-b-xs" for="rep-number">Phone number</label>
             <input type="text" class="form-control" id="rep-number">
           </div>
 
         </fieldset>
     
-        <div class="form-group">
-          <input type="submit" class="button" value="Continue">
-        </div>
+        {% include "includes/continue-save.html" %}
 
       </form>
 

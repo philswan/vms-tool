@@ -14,20 +14,23 @@
 
       {# Back link #}
         {% import "includes/back-link.html" as back %}
-        {{ back.url('2-customer-contact') }}
+        {{ back.url('/2-customer-contact') }}
       {# Back link #}
 
       <form method="post" class="form">
 
         <h1 class="form-title heading-large m-b-xl">
-           Customer&rsquo;s representative
+          <span class="heading-secondary">
+            4 of 9
+          </span>
+          Customer&rsquo;s representative
         </h1>
 
         <div class="form-group m-b-m">
 
           <fieldset class="m-b-s">
 
-            <legend class="form-label m-b-s">Does the customer have a Personal Acting Body or Corporate Acting&nbsp;Body?</legend>
+            <legend class="form-label m-b-xs">Does the customer have a Personal Acting Body or Corporate Acting&nbsp;Body?</legend>
 
             <label class="block-label" for="choice1-1" data-target="panel">
               <input id="choice1-1" type="radio" name="choice1" value="yes">
@@ -62,9 +65,7 @@
 
         </div>
 
-        <div class="form-group">
-          <input type="submit" class="button" value="Continue">
-        </div>
+        {% include "includes/continue-save.html" %}
 
       </form>
 

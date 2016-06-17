@@ -15,12 +15,13 @@
       <form method="post" class="form">
 
         <h1 class="form-title heading-large m-b-xl">
-           Referrer details
+          <span class="heading-secondary">
+            1 of 9
+          </span>
+          About you
         </h1>
 
         <fieldset class="m-b-m">
-
-          <legend class="heading-medium m-b-s">About you</legend>
 
           <!-- Full name -->
           <div class="form-group m-b-ml">
@@ -72,9 +73,7 @@
 
         </fieldset>
 
-        <div class="form-group">
-          <input type="submit" class="button" value="Continue">
-        </div>
+        {% include "includes/continue-save.html" %}
 
       </form>
 

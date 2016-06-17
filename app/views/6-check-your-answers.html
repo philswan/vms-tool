@@ -8,6 +8,12 @@
 <main id="content" role="main">
   {% include "includes/alpha-banner.html" %}
 
+  {% if saved %}
+  <div class="panel panel-border-wide alert-success m-t-l">
+    <p>Your changes have been saved</p>
+  </div>
+  {% endif %}
+
    <h1 class="heading-large">
     Check your answers
   </h1>
@@ -38,7 +44,7 @@
           Leeds One
         </td>
         <td class="change-answer">
-          <a href="1-referrer">
+          <a href="/1-referrer/edit">
             Change <span class="visuallyhidden">referrer details</span>
           </a>
         </td>
@@ -72,7 +78,7 @@
           QQ 12 35 56
         </td>
         <td class="change-answer">
-          <a href="2-customer-details">
+          <a href="/2-customer-details/edit">
             Change <span class="visuallyhidden">customer details</span>
           </a>
         </td>
@@ -89,7 +95,7 @@
           Welsh language
         </td>
         <td class="change-answer">
-          <a href="2-customer-contact">
+          <a href="/2-customer-contact/edit">
             Change <span class="visuallyhidden">customer contact</span>
           </a>
         </td>
@@ -123,7 +129,7 @@
           Daniel Angel
         </td>
         <td class="change-answer">
-          <a href="3-representative-details">
+          <a href="/3-representative-details/edit">
             Change <span class="visuallyhidden">Site of export name</span>
           </a>
         </td>
@@ -137,7 +143,7 @@
           0115 787 897
         </td>
         <td class="change-answer">
-          <a href="3-representative-contact">
+          <a href="/3-representative-contact">
             Change <span class="visuallyhidden">representative contact</span>
           </a>
         </td>
@@ -170,7 +176,7 @@
           Initial date of contact: 12/06/2016
         </td>
         <td class="change-answer">
-          <a href="4-visit-details">
+          <a href="/4-visit-details/edit">
             Change <span class="visuallyhidden">visit details</span>
           </a>
         </td>
@@ -183,7 +189,7 @@
           17 Guy Close, Beeston, Nottingham, NG9 4FF
         </td>
         <td class="change-answer">
-          <a href="4-visit-address">
+          <a href="/4-visit-address/edit">
             Change <span class="visuallyhidden">visit address</span>
           </a>
         </td>
@@ -197,7 +203,7 @@
           Use back door
         </td>
         <td class="change-answer">
-          <a href="4-visit-other">
+          <a href="/4-visit-other/edit">
             Change <span class="visuallyhidden">visit information</span>
           </a>
         </td>
@@ -229,7 +235,7 @@
           &mdash;
         </td>
         <td class="change-answer">
-          <a href="5-attachments">
+          <a href="/5-attachments/edit">
             Change <span class="visuallyhidden">attachments</span>
           </a>
         </td>
@@ -239,7 +245,7 @@
   </table>
 
   <div class="form-group">
-    <a href="7-confirmation" class="button">Accept and submit</a>
+    <a href="/7-confirmation" class="button">Accept and submit</a>
   </div>
 
 

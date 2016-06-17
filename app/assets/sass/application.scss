@@ -76,6 +76,22 @@ input[type="file"] {
   color: #333;
 }
 
+.button.text {
+  background: none;
+  border-color: #FFFFFF;
+  color: $link-colour;
+  text-decoration: underline;
+  box-shadow: none;
+  &:hover, &:focus {
+    color: $link-hover-colour;
+  }
+  &:active {
+    top: 0;
+  }
+}
+
+
+
 // declaration
 .legal_message {
 	margin: 30px 0 30px;

@@ -14,18 +14,21 @@
 
       {# Back link #}
         {% import "includes/back-link.html" as back %}
-        {{ back.url('2-customer-details') }}
+        {{ back.url('/2-customer-details') }}
       {# Back link #}
 
       <form method="post" class="form">
 
         <h1 class="form-title heading-large m-b-xl">
-           Customer contact
+          <span class="heading-secondary">
+            3 of 9
+          </span>
+          Customer contact
         </h1>
 
         <fieldset>
 
-          <legend class="heading-medium m-b-s">Address</legend>
+{#           <legend class="heading-medium m-b-s">Address</legend> #}
 
           {# Postcode lookup #}
             {% import "includes/postcode-lookup.html" as postcode %}
@@ -43,16 +46,18 @@
 
         <fieldset class="m-b-m">
 
-          <legend class="heading-medium m-b-s">Phone number</legend>
+{#           <legend class="form-label m-b-xs">Phone number</legend> #}
 
           <div class="form-group m-b-ml">
-            <label class="form-label m-b-xs" for="full-name">Customer&rsquo;s landline or mobile number</label>
+            <label class="form-label m-b-xs" for="full-name">Phone number</label>
             <input type="text" class="form-control" id="full-name">
           </div>
 
         </fieldset>
 
         <fieldset class="m-b-s">
+
+{#           <legend class="form-label m-b-xs">Contact preferences</legend> #}
 
           <legend class="heading-medium m-b-s">Contact preferences</legend>
 
@@ -71,11 +76,8 @@
           </div>
 
         </fieldset>
-
     
-        <div class="form-group">
-          <input type="submit" class="button" value="Continue">
-        </div>
+        {% include "includes/continue-save.html" %}
 
       </form>
 

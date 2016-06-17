@@ -14,18 +14,21 @@
 
       {# Back link #}
         {% import "includes/back-link.html" as back %}
-        {{ back.url('3-representative-contact') }}
+        {{ back.url('/3-representative-contact') }}
       {# Back link #}
 
       <form method="post" class="form">
 
         <h1 class="form-title heading-large m-b-xl">
-           About the visit
+          <span class="heading-secondary">
+            6 of 9
+          </span>
+          About the visit
         </h1>
 
         <div class="form-group">
           <label class="form-label" for="reason">Purpose of the visit
-            <span class="form-hint m-b-xs">e.g. benefits entitlement check or appointee confirmation visit.</span>
+            <span class="form-hint m-b-xs">For example, benefits entitlement check or appointee confirmation visit.</span>
           </label>
           <textarea class="form-control" id="reason" rows="5"></textarea>
         </div>
@@ -57,9 +60,7 @@
 
         </div><!-- / Date of contact -->
 
-        <div class="form-group">
-          <input type="submit" class="button" value="Continue">
-        </div>
+        {% include "includes/continue-save.html" %}
 
       </form>
 

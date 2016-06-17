@@ -14,27 +14,30 @@
 
       {# Back link #}
         {% import "includes/back-link.html" as back %}
-        {{ back.url('4-visit-details') }}
+        {{ back.url('/4-visit-details') }}
       {# Back link #}
 
       <form method="post" class="form">
 
         <h1 class="form-title heading-large m-b-xl">
-           Visit address
+          <span class="heading-secondary">
+            7 of 9
+          </span>
+          Where will the visit be?
         </h1>
 
         <fieldset class="m-b-l">
 
-          <legend class="form-label m-b-xs">Which address will the visit be at?</legend>
+{#           <legend class="form-label m-b-xs">Where will the visit be?</legend> #}
 
           <label class="block-label" for="choice1-1">
             <input id="choice1-1" type="radio" name="choice1" value="yes">
-            Customer
+            Customer&rsquo;s address
           </label>
 
           <label class="block-label" for="choice1-2">
             <input id="choice1-2" type="radio" name="choice1" value="no">
-            Representative
+            Representative&rsquo;s address
           </label>
 
           <label class="block-label" for="choice1-3" data-target="panel">
@@ -53,11 +56,7 @@
 
         </fieldset>
 
-
-
-        <div class="form-group">
-          <input type="submit" class="button" value="Continue">
-        </div>
+        {% include "includes/continue-save.html" %}
 
       </form>
 

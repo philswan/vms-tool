@@ -14,25 +14,26 @@
 
       {# Back link #}
         {% import "includes/back-link.html" as back %}
-        {{ back.url('4-visit-other') }}
+        {{ back.url('/4-visit-other') }}
       {# Back link #}
 
       <form method="post" class="form">
 
         <h1 class="form-title heading-large m-b-xl">
-           Attachments
+          <span class="heading-secondary">
+            9 of 9
+          </span>
+          Attachments
         </h1>
 
         <div class="form-group m-b-xl">
           <label class="form-label" for="file-upload">Upload any supporting documents (optional)
-            <span class="form-hint">e.g. forms that require completing</span>
+            <span class="form-hint">For example, forms that require completing.</span>
           </label>
           <input type="file" id="file-upload" name="attachmentsSupportingDocs" class="form-control">
         </div>
 
-        <div class="form-group">
-          <input type="submit" class="button" value="Continue">
-        </div>
+        {% include "includes/continue-save.html" %}
 
       </form>
 
