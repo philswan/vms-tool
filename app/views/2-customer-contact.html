@@ -26,23 +26,17 @@
           Customer contact
         </h1>
 
-        <fieldset>
+        {# Postcode lookup #}
+          {% import "includes/postcode-lookup.html" as postcode %}
+          {{ postcode.label('Customer’s postcode') }}
+        {# Postcode lookup #}
 
-{#           <legend class="heading-medium m-b-s">Address</legend> #}
-
-          {# Postcode lookup #}
-            {% import "includes/postcode-lookup.html" as postcode %}
-            {{ postcode.label('Customer’s postcode') }}
-          {# Postcode lookup #}
-
-          <div class="form-group m-b-ns">
-            <label class="form-checkbox" for="care-of">
-              <input id="care-of" name="care-of" type="checkbox" value="true">
-              This is a &lsquo;care of&rsquo; address
-            </label>
-          </div>
-
-        </fieldset>
+        <div class="form-group m-b-ns">
+          <label class="form-checkbox" for="care-of">
+            <input id="care-of" name="care-of" type="checkbox" value="true">
+            This is a &lsquo;care of&rsquo; address
+          </label>
+        </div>
 
         <fieldset class="m-b-m">
 

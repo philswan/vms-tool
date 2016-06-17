@@ -4087,6 +4087,10 @@ ul.todo li:hover {
   padding-right: 20px;
 }
 
+*:not(.token) {
+  font-family: "HelveticaNeue", "Helvetica Neue", "Arial", "Helvetica", sans-serif !important;
+}
+
 #proposition-name {
   font-family: "HelveticaNeue", "Helvetica Neue", "Arial", "Helvetica", sans-serif !important;
 }
@@ -4686,8 +4690,18 @@ legend {
   margin-right: 10px;
 }
 
-input[type="file"] {
-  text-align: baseline;
+.file-upload {
+  background-color: #dee0e2;
+  padding: 20px 16px 20px 21px;
+  line-height: 0;
+  font-size: 16px;
+  cursor: pointer;
+  border: 1px solid #dee0e2;
+  text-indent: -5px;
+}
+
+.file-upload:hover, .file-upload:focus {
+  border-color: #0b0c0c;
 }
 
 .left-col {
@@ -4695,7 +4709,7 @@ input[type="file"] {
 }
 
 .sec-link a, sec-link a:visited {
-  color: #333;
+  color: #666;
 }
 
 .button.text {
@@ -4721,3 +4735,11 @@ input[type="file"] {
   background: url(https://assets.digital.cabinet-office.gov.uk/static/icon-important-aab708504574eda2dc4a4de0802be03dbbd70d57b422de93e55e265c9ae2fc43.png) no-repeat scroll 0 0.5em;
   background-size: 34px 34px;
 }
+
+/* Helvetica baseline nudges */
+.button {
+  padding-top: 0.4em;
+  padding-bottom: 0.4em;
+}
+
+/* End of Helvetica baseline nudges */
