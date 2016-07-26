@@ -5,8 +5,17 @@ router.get('/', function (req, res) {
   res.render('index');
 });
 
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////
+// V1 ROUTES
+////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
 // REFERRER
 /////////////////////////
+
 
 // Referrer
 router.post('/v1/referrer', function (req, res) {
@@ -119,6 +128,130 @@ router.post('/v1/check-your-answers', function (req, res) {
 // Check your answers save
 router.get('/v1/check-your-answers/saved', function (req, res) {
   res.render('v1/check-your-answers', {'saved':true} );
+});
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////
+// V2 ROUTES
+////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// REFERRER
+/////////////////////////
+
+
+// Referrer
+router.post('/v2/referrer', function (req, res) {
+  res.redirect('/v2/customer-details');
+});
+
+// Referrer details check
+router.get('/v2/referrer/edit', function (req, res) {
+  res.render('v2/referrer', {'edit':true} );
+});
+
+// CUSTOMER
+/////////////////////////
+
+// Customer details
+router.post('/v2/customer-details', function (req, res) {
+  res.redirect('/v2/customer-contact');
+});
+
+// Customer details check
+router.get('/v2/customer-details/edit', function (req, res) {
+  res.render('v2/customer-details', {'edit':true} );
+});
+
+// Customer contact
+router.post('/v2/customer-contact', function (req, res) {
+  res.redirect('/v2/representative-details');
+});
+
+// Customer contact check
+router.get('/v2/customer-contact/edit', function (req, res) {
+  res.render('v2/customer-contact', {'edit':true} );
+});
+
+// REPRESENTATIVE
+/////////////////////////
+
+// Representative details
+router.post('/v2/representative-details', function (req, res) {
+  res.redirect('/v2/representative-contact');
+});
+
+// Representative details check
+router.get('/v2/representative-details/edit', function (req, res) {
+  res.render('v2/representative-details', {'edit':true} );
+});
+
+// Representative contact
+router.post('/v2/representative-contact', function (req, res) {
+  res.redirect('/v2/visit-details');
+});
+
+// Representative contact check
+router.get('/v2/representative-contact/edit', function (req, res) {
+  res.render('v2/representative-contact', {'edit':true} );
+});
+
+// VISIT
+/////////////////////////
+
+
+// Visit details
+router.post('/v2/visit-details', function (req, res) {
+  res.redirect('/v2/visit-address');
+});
+
+// Visit details check
+router.get('/v2/visit-details/edit', function (req, res) {
+  res.render('v2/visit-details', {'edit':true} );
+});
+
+// Visit address
+router.post('/v2/visit-address', function (req, res) {
+  res.redirect('/v2/visit-other');
+});
+
+// Visit address check
+router.get('/v2/visit-address/edit', function (req, res) {
+  res.render('v2/visit-address', {'edit':true} );
+});
+
+// Visit other
+router.post('/v2/visit-other', function (req, res) {
+  res.redirect('/v2/attachments');
+});
+
+// Visit other check
+router.get('/v2/visit-other/edit', function (req, res) {
+  res.render('v2/visit-other', {'edit':true} );
+});
+
+// ATTACHMENTS
+/////////////////////////
+
+// Attachments
+router.post('/v2/attachments', function (req, res) {
+  res.redirect('/v2/check-your-answers');
+});
+
+// Attachments check
+router.get('/v2/attachments/edit', function (req, res) {
+  res.render('v2/attachments', {'edit':true} );
+});
+
+// Check your answers
+router.post('/v2/check-your-answers', function (req, res) {
+  res.redirect('/v2/confirmation');
+});
+
+// Check your answers save
+router.get('/v2/check-your-answers/saved', function (req, res) {
+  res.render('v2/check-your-answers', {'saved':true} );
 });
 
 
