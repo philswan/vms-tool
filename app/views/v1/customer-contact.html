@@ -12,12 +12,15 @@
   <div class="grid-row">
     <div class="column-two-thirds">
 
-      {# Back link #}
-        {% import "includes/back-link.html" as back %}
-        {{ back.url('/2-customer-details') }}
-      {# Back link #}
+      {% if edit %}
+      {% else %}
+        {# Back link #}
+          {% import "includes/back-link.html" as back %}
+          {{ back.url('customer-details') }}
+        {# Back link #}
+      {% endif %}
 
-      <form method="post" class="form">
+       <form method="post" class="form">
 
         <h1 class="form-title heading-large m-b-xl">
           <span class="heading-secondary">
@@ -66,7 +69,7 @@
         {% include "includes/continue-save.html" %}
 
       </form>
-
+      
     </div>{# / column-two-thirds #}
   </div>{# / grid-row #}
 </main>

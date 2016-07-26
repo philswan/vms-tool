@@ -9,59 +9,59 @@ router.get('/', function (req, res) {
 /////////////////////////
 
 // Referrer
-router.post('/1-referrer', function (req, res) {
-  res.redirect('/2-customer-details');
+router.post('/v1/referrer', function (req, res) {
+  res.redirect('/v1/customer-details');
 });
 
 // Referrer details check
-router.get('/1-referrer/edit', function (req, res) {
-  res.render('1-referrer', {'edit':true} );
+router.get('/v1/referrer/edit', function (req, res) {
+  res.render('v1/referrer', {'edit':true} );
 });
 
 // CUSTOMER
 /////////////////////////
 
 // Customer details
-router.post('/2-customer-details', function (req, res) {
-  res.redirect('/2-customer-contact');
+router.post('/v1/customer-details', function (req, res) {
+  res.redirect('/v1/customer-contact');
 });
 
 // Customer details check
-router.get('/2-customer-details/edit', function (req, res) {
-  res.render('2-customer-details', {'edit':true} );
+router.get('/v1/customer-details/edit', function (req, res) {
+  res.render('v1/customer-details', {'edit':true} );
 });
 
 // Customer contact
-router.post('/2-customer-contact', function (req, res) {
-  res.redirect('/3-representative-details');
+router.post('/v1/customer-contact', function (req, res) {
+  res.redirect('/v1/representative-details');
 });
 
 // Customer contact check
-router.get('/2-customer-contact/edit', function (req, res) {
-  res.render('2-customer-contact', {'edit':true} );
+router.get('/v1/customer-contact/edit', function (req, res) {
+  res.render('v1/customer-contact', {'edit':true} );
 });
 
 // REPRESENTATIVE
 /////////////////////////
 
 // Representative details
-router.post('/3-representative-details', function (req, res) {
-  res.redirect('/3-representative-contact');
+router.post('/v1/representative-details', function (req, res) {
+  res.redirect('/v1/representative-contact');
 });
 
 // Representative details check
-router.get('/3-representative-details/edit', function (req, res) {
-  res.render('3-representative-details', {'edit':true} );
+router.get('/v1/representative-details/edit', function (req, res) {
+  res.render('v1/representative-details', {'edit':true} );
 });
 
 // Representative contact
-router.post('/3-representative-contact', function (req, res) {
-  res.redirect('/4-visit-details');
+router.post('/v1/representative-contact', function (req, res) {
+  res.redirect('/v1/visit-details');
 });
 
 // Representative contact check
-router.get('/3-representative-contact/edit', function (req, res) {
-  res.render('3-representative-contact', {'edit':true} );
+router.get('/v1/representative-contact/edit', function (req, res) {
+  res.render('v1/representative-contact', {'edit':true} );
 });
 
 // VISIT
@@ -69,56 +69,56 @@ router.get('/3-representative-contact/edit', function (req, res) {
 
 
 // Visit details
-router.post('/4-visit-details', function (req, res) {
-  res.redirect('/4-visit-address');
+router.post('/v1/visit-details', function (req, res) {
+  res.redirect('/v1/visit-address');
 });
 
 // Visit details check
-router.get('/4-visit-details/edit', function (req, res) {
-  res.render('4-visit-details', {'edit':true} );
+router.get('/v1/visit-details/edit', function (req, res) {
+  res.render('v1/visit-details', {'edit':true} );
 });
 
 // Visit address
-router.post('/4-visit-address', function (req, res) {
-  res.redirect('/4-visit-other');
+router.post('/v1/visit-address', function (req, res) {
+  res.redirect('/v1/visit-other');
 });
 
 // Visit address check
-router.get('/4-visit-address/edit', function (req, res) {
-  res.render('4-visit-address', {'edit':true} );
+router.get('/v1/visit-address/edit', function (req, res) {
+  res.render('v1/visit-address', {'edit':true} );
 });
 
 // Visit other
-router.post('/4-visit-other', function (req, res) {
-  res.redirect('/5-attachments');
+router.post('/v1/visit-other', function (req, res) {
+  res.redirect('/v1/attachments');
 });
 
 // Visit other check
-router.get('/4-visit-other/edit', function (req, res) {
-  res.render('4-visit-other', {'edit':true} );
+router.get('/v1/visit-other/edit', function (req, res) {
+  res.render('v1/visit-other', {'edit':true} );
 });
 
 // ATTACHMENTS
 /////////////////////////
 
 // Attachments
-router.post('/5-attachments', function (req, res) {
-  res.redirect('/6-check-your-answers');
+router.post('/v1/attachments', function (req, res) {
+  res.redirect('/v1/check-your-answers');
 });
 
 // Attachments check
-router.get('/5-attachments/edit', function (req, res) {
-  res.render('5-attachments', {'edit':true} );
+router.get('/v1/attachments/edit', function (req, res) {
+  res.render('v1/attachments', {'edit':true} );
 });
 
 // Check your answers
-router.post('/6-check-your-answers', function (req, res) {
-  res.redirect('/7-confirmation');
+router.post('/v1/check-your-answers', function (req, res) {
+  res.redirect('/v1/confirmation');
 });
 
 // Check your answers save
-router.get('/6-check-your-answers/saved', function (req, res) {
-  res.render('6-check-your-answers', {'saved':true} );
+router.get('/v1/check-your-answers/saved', function (req, res) {
+  res.render('v1/check-your-answers', {'saved':true} );
 });
 
 

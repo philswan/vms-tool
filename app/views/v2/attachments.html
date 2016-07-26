@@ -1,0 +1,47 @@
+{% extends "layout_dwp.html" %}
+
+{% block page_title %}
+  Attachments - Visiting Service Management System
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+{% include "includes/alpha-banner.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      {% if edit %}
+      {% else %}
+        {# Back link #}
+          {% import "includes/back-link.html" as back %}
+          {{ back.url('visit-other') }}
+        {# Back link #}
+      {% endif %}
+
+      <form method="post" class="form">
+
+        <h1 class="form-title heading-large m-b-xl">
+          <span class="heading-secondary">
+            9 of 9
+          </span>
+          Attachments
+        </h1>
+
+        <div class="form-group m-b-xl">
+          <label class="form-label m-b-s" for="file-upload">Upload any supporting documents (optional)
+            <span class="form-hint">For example, forms that require completing.</span>
+          </label>
+
+          <input type="file" class="file-upload" id="file-upload" name="attachmentsSupportingDocs">
+        </div>
+
+        {% include "includes/continue-save.html" %}
+
+      </form>
+
+    </div>{# / column-two-thirds #}
+  </div>{# / grid-row #}
+</main>
+{% endblock %}

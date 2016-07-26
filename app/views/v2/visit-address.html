@@ -1,0 +1,69 @@
+{% extends "layout_dwp.html" %}
+
+{% block page_title %}
+  Visit address - Visiting Service Management System
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+{% include "includes/alpha-banner.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      {% if edit %}
+      {% else %}
+        {# Back link #}
+          {% import "includes/back-link.html" as back %}
+          {{ back.url('visit-details') }}
+        {# Back link #}
+      {% endif %}
+
+      <form method="post" class="form">
+
+        <h1 class="form-title heading-large m-b-xl">
+          <span class="heading-secondary">
+            7 of 9
+          </span>
+          Where will the visit be?
+        </h1>
+
+        <fieldset class="m-b-l">
+
+          <legend class="visually-hidden">Where will the visit be?</legend>
+
+          <label class="block-label" for="choice1-1">
+            <input id="choice1-1" type="radio" name="choice1" value="yes">
+            Customer&rsquo;s address
+          </label>
+
+          <label class="block-label" for="choice1-2">
+            <input id="choice1-2" type="radio" name="choice1" value="no">
+            Representative&rsquo;s address
+          </label>
+
+          <label class="block-label" for="choice1-3" data-target="panel">
+            <input id="choice1-3" type="radio" name="choice1" value="no">
+            Other
+          </label>
+
+          <div id="panel" class="panel panel-border-narrow js-hidden m-b-s">
+
+            {# Postcode lookup #}
+              {% import "includes/postcode-lookup.html" as postcode %}
+              {{ postcode.label('Postcode of visit address') }}
+            {# Postcode lookup #}
+
+          </div>{# / panel #}
+
+        </fieldset>
+
+        {% include "includes/continue-save.html" %}
+
+      </form>
+
+    </div>{# / column-two-thirds #}
+  </div>{# / grid-row #}
+</main>
+{% endblock %}

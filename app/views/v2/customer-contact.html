@@ -1,0 +1,94 @@
+{% extends "layout_dwp.html" %}
+
+{% block page_title %}
+  Customer contact - Visiting Service Management System
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+{% include "includes/alpha-banner.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      {% if edit %}
+      {% else %}
+        {# Back link #}
+          {% import "includes/back-link.html" as back %}
+          {{ back.url('customer-details') }}
+        {# Back link #}
+      {% endif %}
+
+      <form method="post" class="form">
+
+        <h1 class="form-title heading-large m-b-xl">
+          <span class="heading-secondary">
+            3 of 9
+          </span>
+          Customer contact
+        </h1>
+
+        <fieldset class="m-b-s m-t-l">
+
+          <div class="form-group">
+
+            <label class="block-label" for="large-print">
+              <input id="large-print" type="radio" name="type-address" value="large-print" >
+              Customer has a fixed address
+            </label>
+
+            <label class="block-label" for="welsh-letter">
+              <input id="welsh-letter" type="radio" name="type-address" value="welsh-letter" >
+              No fixed address
+            </label>
+
+        </fieldset>
+
+        {# Postcode lookup #}
+          {% import "includes/postcode-lookup.html" as postcode %}
+          {{ postcode.label('Customer’s postcode') }}
+        {# Postcode lookup #}
+
+        <br />&nbsp;<br />
+
+        {# Postcode lookup #}
+          {% import "includes/postcode-lookup.html" as postcode %}
+          {{ postcode.label('Correspondence postcode (if different)') }}
+        {# Postcode lookup #}
+
+        <br />&nbsp;<br />
+
+        <div class="form-group m-b-l">
+          <label class="form-label m-b-xs" for="full-name">Phone number</label>
+          <input type="text" class="form-control form-control-1-4 m-b-s" id="full-name">
+        </div>
+
+        <fieldset class="m-b-s m-t-l">
+
+          <legend class="heading-medium m-b-s">Contact preferences</legend>
+
+          <div class="form-group">
+
+            <label class="block-label" for="large-print">
+              <input id="large-print" type="checkbox" name="large-print" value="large-print" >
+              Large print
+            </label>
+
+            <label class="block-label" for="welsh-letter">
+              <input id="welsh-letter" type="checkbox" name="welsh-letter" value="welsh-letter" >
+              Welsh language
+            </label>
+
+          </div>
+
+        </fieldset>
+    
+        {% include "includes/continue-save.html" %}
+
+      </form>
+
+    </div>{# / column-two-thirds #}
+  </div>{# / grid-row #}
+</main>
+{% endblock %}

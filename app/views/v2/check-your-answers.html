@@ -1,0 +1,243 @@
+{% extends "layout_dwp.html" %}
+
+{% block page_title %}
+  Check your answers - Visiting Service Management System
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/alpha-banner.html" %}
+
+  {% if saved %}
+  <div class="panel panel-border-wide alert-success m-t-l">
+    <p>Your changes have been saved</p>
+  </div>
+  {% endif %}
+
+   <h1 class="heading-large">
+    Check your answers
+  </h1>
+
+  <table class="check-your-answers">
+    <thead>
+      <tr>
+        <th colspan="3">
+          <h2 class="heading-medium m-b-xs">
+            Referrer
+          </h2>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="left-col">
+          Referrer details
+        </td>
+        <td>
+          Dave Smith<br>
+          0780 4427 789<br>
+          dave_smith@yahoo.co.uk<br>
+          davesmith.digitaldwp@gmail.com<br>
+          DWP<br>
+          Leeds One
+        </td>
+        <td class="change-answer">
+          <a href="/v1/referrer/edit">
+            Change <span class="visuallyhidden">referrer details</span>
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table class="check-your-answers">
+
+    <thead>
+      <tr>
+        <th colspan="3">
+          <h2 class="heading-medium m-b-xs">
+            Customer
+          </h2>
+        </th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td class="left-col">
+          Customer details
+        </td>
+        <td>
+          Mrs<br>
+          Margaret MacBean<br>
+          12/08/1984<br>
+          QQ 12 35 56
+        </td>
+        <td class="change-answer">
+          <a href="/v1/customer-details/edit">
+            Change <span class="visuallyhidden">customer details</span>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Customer contact
+        </td>
+        <td>
+          6 Camdale Road, Meanwood, Leeds<br>
+          LS6 4BB<br>
+          0115 9179 577<br>
+          Large print<br>
+          Welsh language
+        </td>
+        <td class="change-answer">
+          <a href="/v1/customer-contact/edit">
+            Change <span class="visuallyhidden">customer contact</span>
+          </a>
+        </td>
+      </tr>
+    </tbody>
+
+  </table>
+
+  <table class="check-your-answers">
+
+    <thead>
+      <tr>
+        <th colspan="3">
+          <h2 class="heading-medium m-b-xs">
+            Representative
+          </h2>
+        </th>
+      </tr>
+    </thead>
+
+    <tbody>
+       <tr>
+        <td class="left-col">
+          Representative details
+        </td>
+        <td>
+          Potential <abbr title="Personal Acting Body">PAB</abbr> or <abbr title="Corporate Acting Body">CAB</abbr><br>
+          Mr<br>
+          Daniel Angel
+        </td>
+        <td class="change-answer">
+          <a href="/v1/representative-details/edit">
+            Change <span class="visuallyhidden">Site of export name</span>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Representative contact
+        </td>
+        <td>
+          Same as customer address<br>
+          0115 787 897
+        </td>
+        <td class="change-answer">
+          <a href="/v1/representative-contact">
+            Change <span class="visuallyhidden">representative contact</span>
+          </a>
+        </td>
+      </tr>
+    </tbody>
+
+  </table>
+
+  <table class="check-your-answers">
+
+    <thead>
+      <tr>
+        <th colspan="3">
+          <h2 class="heading-medium m-b-xs">
+            Visit
+          </h2>
+        </th>
+      </tr>
+    </thead>
+
+    <tbody>
+       <tr>
+        <td class="left-col">
+          About the visit
+        </td>
+        <td>
+          Benefits entitlement check<br>
+          Initial date of contact: 12/06/2016
+        </td>
+        <td class="change-answer">
+          <a href="/v1/visit-details/edit">
+            Change <span class="visuallyhidden">visit details</span>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Visit address
+        </td>
+        <td>
+          17 Guy Close, Beeston, Nottingham, NG9 4FF
+        </td>
+        <td class="change-answer">
+          <a href="/v1/visit-address/edit">
+            Change <span class="visuallyhidden">visit address</span>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Visit information
+        </td>
+        <td>
+          Aggressive customer<br>
+          Use back door
+        </td>
+        <td class="change-answer">
+          <a href="/v1/visit-other/edit">
+            Change <span class="visuallyhidden">visit information</span>
+          </a>
+        </td>
+      </tr>
+    </tbody>
+
+  </table>
+
+  <table class="check-your-answers m-b-xl">
+
+    <thead>
+      <tr>
+        <th colspan="3">
+          <h2 class="heading-medium m-b-xs">
+            Attachments
+          </h2>
+        </th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td class="left-col">
+          Files uploaded
+        </td>
+        <td>
+          &mdash;
+        </td>
+        <td class="change-answer">
+          <a href="/v1/5-attachments/edit">
+            Change <span class="visuallyhidden">attachments</span>
+          </a>
+        </td>
+      </tr>
+    </tbody>
+
+  </table>
+
+  <div class="form-group">
+    <a href="/v1/confirmation" class="button">Accept and submit</a>
+  </div>
+
+
+</main>
+{% endblock %}

@@ -12,10 +12,13 @@
   <div class="grid-row">
     <div class="column-two-thirds">
 
-      {# Back link #}
-        {% import "includes/back-link.html" as back %}
-        {{ back.url('/1-referrer') }}
-      {# Back link #}
+      {% if edit %}
+      {% else %}
+        {# Back link #}
+          {% import "includes/back-link.html" as back %}
+          {{ back.url('referrer') }}
+        {# Back link #}
+      {% endif %}
 
       <form method="post" class="form">
 
