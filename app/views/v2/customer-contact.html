@@ -24,40 +24,53 @@
 
         <h1 class="form-title heading-large m-b-xl">
           <span class="heading-secondary">
-            3 of 9
+            4 of 9
           </span>
           Customer contact
         </h1>
 
-        <fieldset class="m-b-s m-t-l">
+        <fieldset class="m-b-0 m-t-l">
 
           <div class="form-group">
 
-            <label class="block-label" for="large-print">
-              <input id="large-print" type="radio" name="type-address" value="large-print" >
+            <label class="block-label" for="address-fixed" data-target="panel1">
+              <input id="address-fixed" type="radio" name="address-type" value="address-fixed" >
               Customer has a fixed address
             </label>
 
-            <label class="block-label" for="welsh-letter">
-              <input id="welsh-letter" type="radio" name="type-address" value="welsh-letter" >
+            <label class="block-label" for="address-no-fixed" data-target="panel2">
+              <input id="address-no-fixed" type="radio" name="address-type" value="address-no-fixed" >
               No fixed address
             </label>
 
-        </fieldset>
+        
 
-        {# Postcode lookup #}
+        <div id="panel1" class="panel panel-border-narrow js-hidden m-b-xs">
+
+          {# Postcode lookup #}
           {% import "includes/postcode-lookup.html" as postcode %}
           {{ postcode.label('Customer’s postcode') }}
-        {# Postcode lookup #}
+          {# Postcode lookup #}
 
-        <br />&nbsp;<br />
+          <div class="clear m-b-s"></div>
 
-        {# Postcode lookup #}
+          {# Postcode lookup #}
           {% import "includes/postcode-lookup.html" as postcode %}
           {{ postcode.label('Correspondence postcode (if different)') }}
-        {# Postcode lookup #}
+          {# Postcode lookup #}
 
-        <br />&nbsp;<br />
+        </div>{# / panel1 #}
+
+        <div id="panel2" class="panel panel-border-narrow js-hidden m-b-xs">
+
+          {# Postcode lookup #}
+          {% import "includes/postcode-lookup.html" as postcode %}
+          {{ postcode.label('Correspondence postcode') }}
+          {# Postcode lookup #}
+
+        </div>{# / panel2 #}
+
+        </fieldset>
 
         <div class="form-group m-b-l">
           <label class="form-label m-b-xs" for="full-name">Phone number</label>

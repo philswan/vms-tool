@@ -143,7 +143,7 @@ router.get('/v1/check-your-answers/saved', function (req, res) {
 
 // Referrer
 router.post('/v2/referrer', function (req, res) {
-  res.redirect('/v2/customer-details');
+  res.redirect('/v2/customer-nino');
 });
 
 // Referrer details check
@@ -153,6 +153,17 @@ router.get('/v2/referrer/edit', function (req, res) {
 
 // CUSTOMER
 /////////////////////////
+
+// Customer National Insurance number
+router.post('/v2/customer-nino', function (req, res) {
+  res.redirect('/v2/customer-details');
+});
+
+// Customer National Insurance check
+router.get('/v2/customer-nino/edit', function (req, res) {
+  res.render('v2/customer-nino', {'edit':true} );
+});
+
 
 // Customer details
 router.post('/v2/customer-details', function (req, res) {
@@ -179,7 +190,7 @@ router.get('/v2/customer-contact/edit', function (req, res) {
 
 // Representative details
 router.post('/v2/representative-details', function (req, res) {
-  res.redirect('/v2/representative-contact');
+  res.redirect('/v2/visit-details');
 });
 
 // Representative details check
@@ -187,15 +198,6 @@ router.get('/v2/representative-details/edit', function (req, res) {
   res.render('v2/representative-details', {'edit':true} );
 });
 
-// Representative contact
-router.post('/v2/representative-contact', function (req, res) {
-  res.redirect('/v2/visit-details');
-});
-
-// Representative contact check
-router.get('/v2/representative-contact/edit', function (req, res) {
-  res.render('v2/representative-contact', {'edit':true} );
-});
 
 // VISIT
 /////////////////////////

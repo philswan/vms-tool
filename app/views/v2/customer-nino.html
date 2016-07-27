@@ -1,0 +1,51 @@
+{% extends "layout_dwp.html" %}
+
+{% block page_title %}
+  About the customer - Visiting Service Management System
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+{% include "includes/alpha-banner.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      {% if edit %}
+      {% else %}
+        {# Back link #}
+          {% import "includes/back-link.html" as back %}
+          {{ back.url('referrer') }}
+        {# Back link #}
+      {% endif %}
+
+      <form method="post" class="form">
+
+        <h1 class="form-title heading-large m-b-xl">
+          <span class="heading-secondary">
+            2 of 9
+          </span>
+{#           About the customer #}
+          Customer&rsquo;s National Insurance number (optional)
+        </h1>
+
+        <fieldset class="m-b-s">
+
+{#           <legend class="heading-medium m-b-m">About the customer</legend> #}
+
+          <div class="form-group m-b-ml">
+{#             <label class="form-label m-b-xs" for="nino">National Insurance number (optional)</label> #}
+            <input type="text" class="form-control" id="nino">
+          </div>
+
+        </fieldset>
+
+        {% include "includes/continue-save.html" %}
+
+      </form>
+
+    </div>{# / column-two-thirds #}
+  </div>{# / grid-row #}
+</main>
+{% endblock %}

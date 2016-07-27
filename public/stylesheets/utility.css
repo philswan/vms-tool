@@ -1971,6 +1971,10 @@ ul.todo li:hover {
   }
 }
 
+.clear {
+  clear: both;
+}
+
 .m-b-0 {
   margin-bottom: 0 !important;
 }
