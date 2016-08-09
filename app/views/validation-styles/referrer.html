@@ -1,0 +1,105 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  About you - Budgeting Loans - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/beta-banner.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <form method="post" class="form">
+
+        <div class="error-summary" role="group" aria-labelledby="error-summary-heading-example-2" tabindex="-1">
+
+          <h1 class="heading-medium error-summary-heading" id="error-summary-heading-example-2">There&rsquo;s a problem</h1>
+          <p>Check your form. You must:</p>
+          <ul class="error-summary-list">
+            <li><a href="#full-name">Enter your full name</a></li>
+            <li><a href="#phone-number">Enter your contact phone number</a></li>
+            <li><a href="#contact-email">Enter a valid email address</a></li>
+            <li><a href="#return-email">Enter a return email address</a></li>
+            <li><a href="#referrer-organisation">Select an organisation</a></li>
+            <li><a href="#referrer-location">Select a location</a></li>
+          </ul>
+
+        </div>
+
+        <h1 class="form-title heading-large m-b-ml">
+          About you
+        </h1>
+
+        <fieldset class="m-b-m">
+
+          <legend class="visually-hidden">About you</legend>
+
+          <!-- Full name -->
+          <div class="form-group m-b-ml error">
+            <label class="form-label m-b-xs" for="full-name">Full name</label>
+            <span class="error-message">Enter your answer</span>
+            <input type="text" class="form-control" id="full-name">
+          </div>
+
+          <!-- Contact number -->
+          <div class="form-group m-b-ml error">
+            <label class="form-label m-b-xs" for="phone-number">Contact phone number</label>
+            <span class="error-message">Enter your answer</span>
+            <input type="text" class="form-control form-control-1-4" id="phone-number">
+          </div>
+
+          <!-- Contact number -->
+          <div class="form-group m-b-ml error">
+            <label class="form-label m-b-xs" for="contact-email">Contact email address</label>
+            <span class="error-message">Enter your answer</span>
+            <input type="text" class="form-control" id="contact-email">
+          </div>
+
+          <!-- Contact number -->
+          <div class="form-group m-b-ml error">
+            <label class="form-label" for="return-email">Return email address</label>
+              <span class="form-hint">All communications will be sent to this address.</span>
+              <span class="error-message">Enter your answer</span>
+            </label>
+            <input type="text" class="form-control" id="return-email">
+          </div>
+
+        </fieldset>
+
+        <fieldset class="m-b-s">
+
+          <legend class="heading-medium m-b-s">Your organisation</legend>
+
+          <!-- Contact number -->
+          <div class="form-group m-b-ml error">
+            <label class="form-label m-b-xs" for="referrer-organisation">Organisation name</label>
+            <span class="error-message">Select your answer</span>
+            <select id="referrer-organisation" name="referrer-organisation" class="form-control">
+              <option value="place-holder">Please select an organisation</option>
+            </select>
+          </div>
+
+          <!-- Location -->
+          <div class="form-group m-b-ml error">
+            <label class="form-label m-b-xs" for="referrer-location">Location</label>
+            <span class="error-message">Select your answer</span>
+            <select id="referrer-location" name="referrer-location" class="form-control">
+              <option value="place-holder">Please select a location</option>
+            </select>
+          </div>
+
+        </fieldset>
+
+        {% include "includes/continue-save.html" %}
+
+      </form>
+
+    </div>{# / column-two-thirds #}
+  </div>{# / grid-row #}
+</main>
+
+{% endblock %}
