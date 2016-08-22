@@ -1,0 +1,150 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  About you - Budgeting Loans - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  {% include "includes/alpha-banner.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <form method="post" class="form">
+
+        <h1 class="form-title heading-large m-b-xl">
+          Postcode lookup
+        </h1>
+
+        <h2 class="heading-medium">Step 1</h2>
+
+        <div class="form-group m-b-m">
+          <label class="form-label m-b-xs" for="postcode">Customer&rsquo;s postcode</label>
+          <input type="text" class="form-control postcode m-b-s" id="postcode">
+          <button id="add-button" class="button button-add-another">Find address</button>
+          <p class="m-b-0 font-xsmall"><a href="#">Enter address manually</a></p>
+        </div>
+
+        <br><br><br><br><br>
+
+        <h2 class="heading-medium m-t-xl">Step 2</h2>
+
+        <div class="form-group m-b-m">
+          <label class="form-label m-b-xs" for="postcode">Customer&rsquo;s postcode</label>
+          <input type="text" class="form-control postcode m-b-s" id="postcode" value="NG1 9TY">
+          <button id="add-button" class="button button-add-another">Find address</button>
+          <p class="m-b-0 font-xsmall"><a href="#">Enter address manually</a></p>
+        </div>
+
+        <br><br><br><br><br>
+
+        <h2 class="heading-medium m-t-xl">Step 3</h2>
+
+        <div class="form-group m-b-m">
+          <label class="form-label m-b-xs" for="postcode">Customer&rsquo;s postcode</label>
+          <input type="text" class="form-control postcode m-b-s" id="postcode" value="NG1 9TY">
+          <button id="add-button" class="button button-add-another" disabled="true">Find address</button>
+          <span class="loading"><span>loading</span></span>
+          <p class="m-b-0 font-xsmall"><a href="#">Enter address manually</a></p>
+        </div>
+
+        <br><br><br><br><br>
+
+        <h2 class="heading-medium m-t-xl">Step 4</h2>
+
+        <div class="form-group m-b-m">
+          <label class="form-label m-b-xs" for="postcode">Customer&rsquo;s postcode</label>
+          <input type="text" class="form-control postcode m-b-s" id="postcode" value="NG1 9TY">
+          <button id="add-button" class="button button-add-another">Find address</button>
+
+          <label class="form-label m-b-xs">Pick an address</label>
+          <select class="form-control">
+            <option>Please select your address</option>
+            <option value="#">6 Culver Road St. Albarns</option>
+            <option value="#">7 Culver Road St. Albarns</option>
+            <option value="#">8 Culver Road St. Albarns</option>
+            <option value="#">9 Culver Road St. Albarns</option>
+            <option value="#">10 Culver Road St. Albarns</option>
+            <option value="#">11 Culver Road St. Albarns</option>
+          </select>
+
+        </div>
+
+        <p class="m-b-0 font-xsmall"><a href="#">Enter address manually</a></p>
+
+
+        <br>
+
+        <h2 class="heading-medium m-t-xl">Step 5</h2>
+
+        <div class="form-group m-b-m">
+          <label class="form-label m-b-xs" for="postcode">Customer&rsquo;s postcode</label>
+          <input type="text" class="form-control postcode m-b-s" id="postcode" value="NG1 9TY">
+          <button id="add-button" class="button button-add-another">Find address</button>
+
+          <label class="form-label m-b-xs">Pick an address</label>
+          <select class="form-control">
+            <option>Please select your address</option>
+            <option value="#" selected>6 Culver Road St. Albarns</option>
+            <option value="#">7 Culver Road St. Albarns</option>
+            <option value="#">8 Culver Road St. Albarns</option>
+            <option value="#">9 Culver Road St. Albarns</option>
+            <option value="#">10 Culver Road St. Albarns</option>
+            <option value="#">11 Culver Road St. Albarns</option>
+          </select>
+          <span class="loading"><span>loading</span></span>
+
+        </div>
+
+        <p class="m-b-0 font-xsmall"><a href="#">Enter address manually</a></p>
+
+        <br><br>
+
+        <h2 class="heading-medium m-t-xl">Step 6</h2>
+
+        <div class="form-group m-b-m">
+          <label class="form-label m-b-xs" for="postcode">Customer&rsquo;s postcode</label>
+          <input type="text" class="form-control postcode m-b-s" id="postcode" value="NG1 9TY">
+          <button id="add-button" class="button button-add-another">Find address</button>
+        </div>
+
+        <fieldset class="form-group u-clearfix m-b-0">
+
+          <div class="form-group">
+
+            <label class="form-label m-b-xs" for="address-building-street">Building and street</label>
+            <input type="text" class="form-control m-b-s" id="address-building-street" name="address-building-street" value="6 Culver Road St. Albarns">
+
+            <label class="form-label visually-hidden" for="address-building-street2">Building and street line 2 (optional)</label>
+            <input type="text" class="form-control" id="address-building-street2" name="address1" value="">
+
+          </div>
+
+          <div class="form-group">
+            <label class="form-label m-b-xs" for="address-town">Town or city</label>
+            <input type="text" class="form-control" id="address-town" name="address-town" value="Meanwood">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label m-b-xs" for="address-county">County</label>
+            <input type="text" class="form-control" id="address-county" name="address-county" value="Leeds">
+          </div>
+
+          <div class="form-group js-error-container m-t-ns">
+            <label class="form-label m-b-xs" for="address-postcode">Postcode</label>
+            <input type="text" class="form-control form-control-1-4" id="address-postcode" name="address-postcode" value="NG1 9TY">
+          </div>
+
+        </fieldset>
+
+      </form>
+
+
+    </div>{# / column-two-thirds #}
+  </div>{# / grid-row #}
+</main>
+
+{% endblock %}

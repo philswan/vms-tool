@@ -4747,3 +4747,16 @@ legend {
 }
 
 /* End of Helvetica baseline nudges */
+.loading {
+  background-image: url(/public/images/loading-spinner.gif);
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+}
+
+.loading span {
+  text-indent: -9999em;
+  display: inline-block;
+}
