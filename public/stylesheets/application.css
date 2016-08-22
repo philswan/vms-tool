@@ -4760,3 +4760,8 @@ legend {
   text-indent: -9999em;
   display: inline-block;
 }
+
+button:disabled.button-add-another:hover,
+button:disabled.button-add-another:active {
+  background-color: #eee;
+}
