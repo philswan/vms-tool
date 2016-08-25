@@ -1,0 +1,159 @@
+{% extends "layout_dwp.html" %}
+
+{% block page_title %}
+  Customer contact - Visiting Service Management System
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+{% include "includes/alpha-banner.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      {% if edit %}
+      {% else %}
+        {# Back link #}
+          {% import "includes/back-link.html" as back %}
+          {{ back.url('customer-details') }}
+        {# Back link #}
+      {% endif %}
+
+      <form method="post" class="form">
+
+        <h1 class="form-title heading-large m-b-xl">
+          <span class="heading-secondary">
+            4 of 9
+          </span>
+          Customer contact
+        </h1>
+
+        <fieldset class="m-b-0 m-t-l">
+
+          <div class="form-group">
+
+            <label class="block-label" for="address-fixed" data-target="panel1">
+              <input id="address-fixed" type="radio" name="address-type" value="address-fixed" checked="checked">
+              Customer has a fixed address
+            </label>
+
+            <label class="block-label" for="address-no-fixed" data-target="panel2">
+              <input id="address-no-fixed" type="radio" name="address-type" value="address-no-fixed" >
+              No fixed address
+            </label>
+
+        <div id="panel1" class="panel panel-border-narrow m-b-xs">
+
+          <h2 class="heading-medium m-b-s">Customer&rsquo;s address</h2>
+
+          <div class="form-group m-b-m">
+            <label class="form-label m-b-xs" for="postcode">Customer&rsquo;s postcode</label>
+            <input type="text" class="form-control postcode m-b-s" id="postcode" value="NG1 9TY">
+            <button id="add-button" class="button button-add-another">Find address</button>
+            <p class="bold-xsmall">No results found, enter customer&rsquo;s address manually</p>
+          </div>
+
+          <fieldset class="form-group u-clearfix m-b-xl">
+
+            <div class="form-group">
+
+              <label class="form-label m-b-xs" for="address-building-street">Building and street</label>
+              <input type="text" class="form-control m-b-s" id="address-building-street" name="address-building-street" value="">
+
+              <label class="form-label visually-hidden" for="address-building-street2">Building and street line 2 (optional)</label>
+              <input type="text" class="form-control" id="address-building-street2" name="address1" value="">
+
+            </div>
+
+            <div class="form-group">
+              <label class="form-label m-b-xs" for="address-town">Town or city</label>
+              <input type="text" class="form-control" id="address-town" name="address-town" value="">
+            </div>
+
+            <div class="form-group js-error-container m-t-ns">
+              <label class="form-label m-b-xs" for="address-postcode">Postcode</label>
+              <input type="text" class="form-control form-control-1-4" id="address-postcode" name="address-postcode" value="NG1 9TY">
+            </div>
+
+          </fieldset>
+
+          <h2 class="heading-medium m-b-s">Correspondence address (if different)</h2>
+
+          <div class="form-group m-b-m">
+            <label class="form-label m-b-xs" for="postcode">Correspondence postcode</label>
+            <input type="text" class="form-control postcode m-b-s" id="postcode" value="NG1 4GT">
+            <button id="add-button" class="button button-add-another">Find address</button>
+            <p class="bold-xsmall">No results found, enter correspondence address manually</p>
+          </div>
+
+          <fieldset class="form-group u-clearfix m-b-xl">
+
+            <div class="form-group">
+
+              <label class="form-label m-b-xs" for="address-building-street">Building and street</label>
+              <input type="text" class="form-control m-b-s" id="address-building-street" name="address-building-street" value="">
+
+              <label class="form-label visually-hidden" for="address-building-street2">Building and street line 2 (optional)</label>
+              <input type="text" class="form-control" id="address-building-street2" name="address1" value="">
+
+            </div>
+
+            <div class="form-group">
+              <label class="form-label m-b-xs" for="address-town">Town or city</label>
+              <input type="text" class="form-control" id="address-town" name="address-town" value="">
+            </div>
+
+            <div class="form-group js-error-container m-t-ns">
+              <label class="form-label m-b-xs" for="address-postcode">Postcode</label>
+              <input type="text" class="form-control form-control-1-4" id="address-postcode" name="address-postcode" value="NG1 4GT">
+            </div>
+
+          </fieldset>
+
+        </div>{# / panel1 #}
+
+        <div id="panel2" class="panel panel-border-narrow js-hidden m-b-xs">
+
+          {# Postcode lookup #}
+          {% import "includes/postcode-lookup.html" as postcode %}
+          {{ postcode.label('Correspondence postcode') }}
+          {# Postcode lookup #}
+
+        </div>{# / panel2 #}
+
+        </fieldset>
+
+        <div class="form-group m-b-l">
+          <label class="form-label m-b-xs" for="full-name">Phone number</label>
+          <input type="text" class="form-control form-control-1-4 m-b-s" id="full-name">
+        </div>
+
+        <fieldset class="m-b-s m-t-l">
+
+          <legend class="heading-medium m-b-s">Contact preferences</legend>
+
+          <div class="form-group">
+
+            <label class="block-label" for="large-print">
+              <input id="large-print" type="checkbox" name="large-print" value="large-print" >
+              Large print
+            </label>
+
+            <label class="block-label" for="welsh-letter">
+              <input id="welsh-letter" type="checkbox" name="welsh-letter" value="welsh-letter" >
+              Welsh language
+            </label>
+
+          </div>
+
+        </fieldset>
+    
+        {% include "includes/continue-save.html" %}
+
+      </form>
+
+    </div>{# / column-two-thirds #}
+  </div>{# / grid-row #}
+</main>
+{% endblock %}

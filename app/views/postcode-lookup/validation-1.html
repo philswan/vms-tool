@@ -22,6 +22,16 @@
 
       <form method="post" class="form">
 
+        <div class="error-summary" role="group" aria-labelledby="error-summary-heading-example-2" tabindex="-1">
+
+          <h1 class="heading-medium error-summary-heading" id="error-summary-heading-example-2">There&rsquo;s a problem</h1>
+          <p>Check your form. You must:</p>
+          <ul class="error-summary-list">
+            <li><a href="#postcode">Enter a valid customer postcode</a></li>
+          </ul>
+
+        </div>
+
         <h1 class="form-title heading-large m-b-xl">
           <span class="heading-secondary">
             4 of 9
@@ -34,7 +44,7 @@
           <div class="form-group">
 
             <label class="block-label" for="address-fixed" data-target="panel1">
-              <input id="address-fixed" type="radio" name="address-type" value="address-fixed" >
+              <input id="address-fixed" type="radio" name="address-type" value="address-fixed" checked="checked">
               Customer has a fixed address
             </label>
 
@@ -43,14 +53,19 @@
               No fixed address
             </label>
 
-        <div id="panel1" class="panel panel-border-narrow js-hidden m-b-xs">
+        <div id="panel1" class="panel panel-border-narrow m-b-xs">
 
           <h2 class="heading-medium m-b-s">Customer&rsquo;s address</h2>
 
-          {# Postcode lookup #}
-          {% import "includes/postcode-lookup.html" as postcode %}
-          {{ postcode.label('Customer’s postcode') }}
-          {# Postcode lookup #}
+          <div class="form-group m-b-m">
+            <div class="error m-b-s">
+            <label class="form-label m-b-xs" for="postcode">Customer&rsquo;s postcode</label>
+            <span class="error-message">Correct your answer</span>
+            <input type="text" class="form-control postcode m-b-0" id="postcode" value="NG8+*%">
+            <button id="add-button" class="button button-add-another">Find address</button>
+            </div>
+            <p class="m-b-0 font-xsmall"><a href="#">Enter address manually</a></p>
+          </div>
 
           <div class="clear"></div>
 
