@@ -4769,3 +4769,27 @@ button:disabled.button-add-another:active {
 hr {
   clear: both;
 }
+
+.dropzone {
+  background-color: red;
+  padding: 50px 20px 40px 20px;
+  text-align: center;
+  background-color: #dee0e2;
+  border: 1px solid #bfc1c3;
+}
+
+.col-right {
+  text-align: right;
+  padding-right: 0;
+}
+
+.inline-button-text {
+  left: 8px;
+  top: 7px;
+  position: relative;
+}
+
+.red-bold {
+  color: #b10e1e;
+  font-weight: bold;
+}

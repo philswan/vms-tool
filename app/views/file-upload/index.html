@@ -16,132 +16,162 @@
       <form method="post" class="form">
 
         <h1 class="form-title heading-large m-b-xl">
-          Postcode lookup
+          Attachments
         </h1>
 
-        <h2 class="heading-medium">Step 1</h2>
+        <h2 class="heading-medium">No JavaScript unavailable</h2>
 
-        <div class="form-group m-b-m">
-          <label class="form-label m-b-xs" for="postcode">Customer&rsquo;s postcode</label>
-          <input type="text" class="form-control postcode m-b-s" id="postcode">
-          <button id="add-button" class="button button-add-another">Find address</button>
-{#           <p class="m-b-0 font-xsmall"><a href="#">Enter address manually</a></p> #}
+        <div class="form-group m-b-xl">
+          <input type="file" class="file-upload" id="file-upload" name="attachmentsSupportingDocs" multiple>
+        </div>
+
+        {% include "includes/continue-save.html" %}
+
+        <div class="clear"></div>
+        <hr>
+
+        <h2 class="heading-medium">JavaScript available</h2>
+
+        <h2 class="heading-small m-b-l">Step 1</h2>
+
+        <p><button id="add-button" class="button button-add-another">Choose files</button> <span class="inline-button-text">Or drag and drop</span></p>
+
+        <div class="dropzone m-b-l">
+
+          <p>Drag and drop files here</p>
+
+        </div>{# /dropzone #}
+
+        <div class="form-group">
+          <input type="submit" class="button" value="Continue">
         </div>
 
         <div class="clear"></div>
         <hr>
 
-        <h2 class="heading-medium m-t-xl">Step 2</h2>
+        <h2 class="heading-small m-b-l">Step 2</h2>
 
-        <div class="form-group m-b-m">
-          <label class="form-label m-b-xs" for="postcode">Customer&rsquo;s postcode</label>
-          <input type="text" class="form-control postcode m-b-s" id="postcode" value="NG1 9TY">
-          <button id="add-button" class="button button-add-another">Find address</button>
-{#           <p class="m-b-0 font-xsmall"><a href="#">Enter address manually</a></p> #}
+        <p><button id="add-button" class="button button-add-another">Choose more files</button></p>
+
+        <table class="m-b-l">
+            <thead class="visually-hidden">
+              <tr>
+                <th>File name</th>
+                <th>Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+          <tbody>
+            <tr>
+              <td>ExampleFile1.docx</td>
+              <td><span class="visually-hidden">Ready to upload</span></td>
+              <td class="col-right"><a href="#">Remove file <span class="visually-hidden">ExampleFile1.docx</span></a></td>
+            </tr>
+            <tr>
+              <td>ExampleFile2.doc</td>
+              <td><span class="visually-hidden">Ready to upload</span></td>
+              <td class="col-right"><a href="#">Remove file <span class="visually-hidden">ExampleFile2.doc</span></a></td>
+            </tr>
+            <tr>
+              <td>ExampleFile3.pdf</td>
+              <td><span class="visually-hidden">Ready to upload</span></td>
+              <td class="col-right"><a href="#">Remove file <span class="visually-hidden">ExampleFile3.pdf</span></a></td>
+            </tr>
+            <tr>
+              <td>ExampleFile4.dmg</td>
+              <td><span class="red-bold">File type not allowed</span></td>
+              <td class="col-right"><a href="#">Remove file <span class="visually-hidden">ExampleFile3.pdf</span></a></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="form-group">
+          <input type="submit" class="button" value="Upload and continue">
         </div>
 
         <div class="clear"></div>
         <hr>
 
-        <h2 class="heading-medium m-t-xl">Step 3</h2>
+        <h2 class="heading-small m-b-l">Step 3</h2>
 
-        <div class="form-group m-b-m">
-          <label class="form-label m-b-xs" for="postcode">Customer&rsquo;s postcode</label>
-          <input type="text" class="form-control postcode m-b-s" id="postcode" value="NG1 9TY">
-          <button id="add-button" class="button button-add-another" disabled="true">Find address</button>
-          <span class="loading"><span>loading</span></span>
-{#           <p class="m-b-0 font-xsmall"><a href="#">Enter address manually</a></p> #}
+        <p><button id="add-button" class="button button-add-another">Choose more files</button></p>
+
+        <table class="m-b-l">
+            <thead class="visually-hidden">
+              <tr>
+                <th>File name</th>
+                <th>Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+          <tbody>
+            <tr>
+              <td>ExampleFile1.docx</td>
+              <td><span class="visually-hidden">Ready to upload</span></td>
+              <td class="col-right"><a href="#">Remove file <span class="visually-hidden">ExampleFile1.docx</span></a></td>
+            </tr>
+            <tr>
+              <td>ExampleFile2.doc</td>
+              <td><span class="visually-hidden">Ready to upload</span></td>
+              <td class="col-right"><a href="#">Remove file <span class="visually-hidden">ExampleFile2.doc</span></a></td>
+            </tr>
+            <tr>
+              <td>ExampleFile3.pdf</td>
+              <td><span class="visually-hidden">Ready to upload</span></td>
+              <td class="col-right"><a href="#">Remove file <span class="visually-hidden">ExampleFile3.pdf</span></a></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="form-group">
+          <input type="submit" class="button" value="Upload and continue">
         </div>
 
         <div class="clear"></div>
         <hr>
 
-        <h2 class="heading-medium m-t-xl">Step 4</h2>
+        <h2 class="heading-small m-b-l">Step 4</h2>
 
-        <div class="form-group m-b-m">
-          <label class="form-label m-b-xs" for="postcode">Customer&rsquo;s postcode</label>
-          <input type="text" class="form-control postcode m-b-s" id="postcode" value="NG1 9TY">
-          <button id="add-button" class="button button-add-another">Find address</button>
+        <p><button id="add-button" class="button button-add-another">Choose more files</button></p>
 
-          <label class="form-label m-b-xs">Pick an address</label>
-          <select class="form-control">
-            <option>Select address</option>
-            <option value="#">6 Culver Road St. Albarns</option>
-            <option value="#">7 Culver Road St. Albarns</option>
-            <option value="#">8 Culver Road St. Albarns</option>
-            <option value="#">9 Culver Road St. Albarns</option>
-            <option value="#">10 Culver Road St. Albarns</option>
-            <option value="#">11 Culver Road St. Albarns</option>
-            <option value="#">None of these are the correct address</option>
-          </select>
+        <table class="m-b-l">
+            <thead class="visually-hidden">
+              <tr>
+                <th>File name</th>
+                <th>Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+          <tbody>
+            <tr>
+              <td>ExampleFile1.docx</td>
+              <td><span class="visually-hidden">Ready to upload</span></td>
+              <td class="col-right"><a href="#">Remove file <span class="visually-hidden">ExampleFile1.docx</span></a></td>
+            </tr>
+            <tr>
+              <td>ExampleFile2.doc</td>
+              <td><span class="visually-hidden">Ready to upload</span></td>
+              <td class="col-right"><a href="#">Remove file <span class="visually-hidden">ExampleFile2.doc</span></a></td>
+            </tr>
+            <tr>
+              <td>ExampleFile3.pdf</td>
+              <td><span class="visually-hidden">Ready to upload</span></td>
+              <td class="col-right"><a href="#">Remove file <span class="visually-hidden">ExampleFile3.pdf</span></a></td>
+            </tr>
+          </tbody>
+        </table>
 
+        <div class="form-group">
+          <input type="submit" class="button" value="Upload and continue" disabled="true">
+          <span class="loading inline-button-text"><span>loading</span></span>
         </div>
-
-{#         <p class="m-b-0 font-xsmall"><a href="#">Enter address manually</a></p> #}
 
         <div class="clear"></div>
         <hr>
 
-        <h2 class="heading-medium m-t-xl">Step 5</h2>
+        <h2 class="heading-small m-b-l">Step 5</h2>
 
-        <div class="form-group m-b-m">
-          <label class="form-label m-b-xs" for="postcode">Customer&rsquo;s postcode</label>
-          <input type="text" class="form-control postcode m-b-s" id="postcode" value="NG1 9TY">
-          <button id="add-button" class="button button-add-another">Find address</button>
-
-          <label class="form-label m-b-xs">Pick an address</label>
-          <select class="form-control">
-            <option>Select address</option>
-            <option value="#" selected>6 Culver Road St. Albarns</option>
-            <option value="#">7 Culver Road St. Albarns</option>
-            <option value="#">8 Culver Road St. Albarns</option>
-            <option value="#">9 Culver Road St. Albarns</option>
-            <option value="#">10 Culver Road St. Albarns</option>
-            <option value="#">11 Culver Road St. Albarns</option>
-            <option value="#">None of these are the correct address</option>
-          </select>
-          <span class="loading"><span>loading</span></span>
-
-          </div>
-
-{#           <p class="m-b-0 font-xsmall"><a href="#">Enter address manually</a></p> #}
-
-        
-
-        <div class="clear"></div>
-        <hr>
-
-        <h2 class="heading-medium m-t-xl">Step 6</h2>
-
-        <div class="form-group m-b-m">
-          <label class="form-label m-b-xs" for="postcode">Customer&rsquo;s postcode</label>
-          <input type="text" class="form-control postcode m-b-s" id="postcode" value="NG1 9TY">
-          <button id="add-button" class="button button-add-another">Find address</button>
-        </div>
-
-        <fieldset class="form-group u-clearfix m-b-0">
-
-          <div class="form-group">
-
-            <label class="form-label m-b-xs" for="address-building-street">Building and street</label>
-            <input type="text" class="form-control m-b-s" id="address-building-street" name="address-building-street" value="6 Culver Road St. Albarns">
-
-            <label class="form-label visually-hidden" for="address-building-street2">Building and street line 2 (optional)</label>
-            <input type="text" class="form-control" id="address-building-street2" name="address1" value="">
-
-          </div>
-
-          <div class="form-group">
-            <label class="form-label m-b-xs" for="address-town">Town or city</label>
-            <input type="text" class="form-control" id="address-town" name="address-town" value="Meanwood">
-          </div>
-
-          <div class="form-group js-error-container m-t-ns">
-            <label class="form-label m-b-xs" for="address-postcode">Postcode</label>
-            <input type="text" class="form-control form-control-1-4" id="address-postcode" name="address-postcode" value="NG1 9TY">
-          </div>
-
-        </fieldset>
+        <p>Next page</p>
 
       </form>
 

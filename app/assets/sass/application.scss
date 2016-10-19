@@ -147,4 +147,31 @@ hr {
   clear: both;
 }
 
+// File uploads
+
+.dropzone {
+  background-color: red;
+  padding: 50px 20px 40px 20px;
+  text-align: center;
+  background-color: $grey-3;
+  border: 1px solid $border-colour;
+}
+
+// Tables
+
+.col-right {
+  text-align: right;
+  padding-right: 0;
+}
+
+.inline-button-text {
+  left: 8px;
+  top: 7px;
+  position: relative;
+}
+
+.red-bold {
+  color: $red;
+  font-weight: bold;
+}
 
