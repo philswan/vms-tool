@@ -1,0 +1,77 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  File upload design - Budgeting Loans - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  {% include "includes/alpha-banner.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      {% if edit %}
+      {% else %}
+        {# Back link #}
+          {% import "includes/back-link.html" as back %}
+          {{ back.url('errors') }}
+        {# Back link #}
+      {% endif %}
+
+      <form method="post" class="form">
+
+        <div class="panel panel-border-wide alert-warning m-t-m">
+          <p>There&rsquo;s a server problem. Please try again.</p>
+          <p>If you continue to see this message, contact XXXXXXX.</p>
+        </div>
+
+        <h1 class="form-title heading-large m-b-xl">
+          <span class="heading-secondary">
+            9 of 9
+          </span>
+          Attachments
+        </h1>
+
+        <p><button id="add-button" class="button button-add-another">Choose more files</button></p>
+
+        <table class="m-b-l" id="file-list">
+            <thead class="visually-hidden">
+              <tr>
+                <th>File name</th>
+                <th>Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+          <tbody>
+            <tr>
+              <td>ExampleFile1.docx</td>
+              <td><span class="visually-hidden">Ready to upload</span></td>
+              <td class="col-right"><a href="#">Remove file <span class="visually-hidden">ExampleFile1.docx</span></a></td>
+            </tr>
+            <tr>
+              <td>ExampleFile2.doc</td>
+              <td><span class="visually-hidden">Ready to upload</span></td>
+              <td class="col-right"><a href="#">Remove file <span class="visually-hidden">ExampleFile2.doc</span></a></td>
+            </tr>
+            <tr>
+              <td>ExampleFile3.pdf</td>
+              <td><span class="visually-hidden">Ready to upload</span></td>
+              <td class="col-right"><a href="#">Remove file <span class="visually-hidden">ExampleFile3.pdf</span></a></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="form-group">
+          <a href="next-page" class="button">Upload and continue</a>
+        </div>
+
+      </form>
+
+    </div>{# / column-two-thirds #}
+  </div>{# / grid-row #}
+</main>
+
+{% endblock %}

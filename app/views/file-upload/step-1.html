@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  File upload design - Budgeting Loans - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  {% include "includes/alpha-banner.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      {% if edit %}
+      {% else %}
+        {# Back link #}
+          {% import "includes/back-link.html" as back %}
+          {{ back.url('visit-other') }}
+        {# Back link #}
+      {% endif %}
+
+      <form method="post" class="form">
+
+        <h1 class="form-title heading-large m-b-xl">
+          <span class="heading-secondary">
+            9 of 9
+          </span>
+          Attachments
+        </h1>
+
+        <p><button id="add-button" class="button button-add-another">Choose files</button> <span class="inline-button-text">Or drag and drop</span></p>
+
+        <div class="dropzone m-b-l">
+
+          <p>Drag and drop files here</p>
+
+        </div>{# /dropzone #}
+
+        <div class="form-group">
+          <a href="" class="button">Upload and continue</a>
+        </div>
+
+      </form>
+
+    </div>{# / column-two-thirds #}
+  </div>{# / grid-row #}
+</main>
+
+{% endblock %}

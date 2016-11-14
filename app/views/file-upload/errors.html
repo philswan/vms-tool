@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  File upload design - Budgeting Loans - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  {% include "includes/alpha-banner.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      {% if edit %}
+      {% else %}
+        {# Back link #}
+          {% import "includes/back-link.html" as back %}
+          {{ back.url('visit-other') }}
+        {# Back link #}
+      {% endif %}
+
+      <h1 class="heading-large">File upload errors</h1>
+
+      <ul class="list list-bullet">
+        <li><a href="server-error">Server error</a></li>
+      </ul>
+
+      <h2 class="heading-medium">Problem with file size</h2>
+
+      <p>Removing file before clicking the &lsquo;Upload and continue&rsquo; button</p>
+
+      <p><img src="/public/images/error-gifs/file-size-1.gif" width="100%"></p>
+
+      <p>Removing file after clicking the &lsquo;Upload and continue&rsquo; button</p>
+
+      <p><img src="/public/images/error-gifs/file-size-2.gif" width="100%"></p>
+
+      <h2 class="heading-medium">Problem with file type</h2>
+
+      <p>Removing file before clicking the &lsquo;Upload and continue&rsquo; button</p>
+
+      <p><img src="/public/images/error-gifs/file-type-1.gif" width="100%"></p>
+
+      <p>Removing file after clicking the &lsquo;Upload and continue&rsquo; button</p>
+
+      <p><img src="/public/images/error-gifs/file-type-2.gif" width="100%"></p>
+       
+
+    </div>{# / column-two-thirds #}
+  </div>{# / grid-row #}
+</main>
+
+{% endblock %}
